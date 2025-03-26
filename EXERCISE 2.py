@@ -34,7 +34,7 @@ def connected_components(G): #a connected component is a maximal set of nodes wh
 def largest_component_size(components): #find largest connected component
     return max(len(comp) for comp in components)
 
-def average_lcc_fraction(N, pi, num_realizations=100):
+def average_lcc_fraction(N, pi, num_realizations=10):
     lcc_sizes = [] #list to store sizes of the largest components from different realizations
     for _ in range(num_realizations):
         G = generate_random_graph(N, pi)  #generate random graph for each realization
