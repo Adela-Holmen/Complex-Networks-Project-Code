@@ -219,6 +219,7 @@ for pi in pi_values:
     Tc_mc = T_values[np.argmax(np.diff(mc_magnetizations[pi])) + 1]  #approximation of T_c from MCMC
     print(f"Estimated phase transition temperature Tc for MCMC (pi = {pi}): {Tc_mc:.2f}")
 
+#plot phase diagram using population dynamics
 plt.figure(figsize=(8, 6))
 for pi, magnetizations_pop_dyn in phase_diagram.items():
     plt.plot(T_values_pop_dyn, magnetizations_pop_dyn, label=f'π = {pi:.2f}')
